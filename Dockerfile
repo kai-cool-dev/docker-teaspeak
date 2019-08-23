@@ -3,7 +3,7 @@ FROM debian:buster
 LABEL vendor="Kai.cool DEV"
 LABEL de.teaspeak.version="1.3.22"
 
-RUN apt-get update -y && apt install -y ffmpeg unzip && mkdir /opt/teaspeak
+RUN apt-get update -y && apt install -y python python-pip ffmpeg unzip && mkdir /opt/teaspeak && pip install --upgrade youtube-dl
 
 COPY teaspeak /opt/teaspeak/
 
