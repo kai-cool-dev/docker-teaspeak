@@ -7,11 +7,15 @@ RUN apt-get update -y && apt install -y unzip && mkdir /opt/teaspeak
 
 COPY teaspeak /opt/teaspeak/
 
+WORKDIR /opt/teaspeak/
+
 RUN chmod +x /opt/teaspeak/teastart_minimal.sh && \
     chmod +x /opt/teaspeak/TeaSpeakServer && \
     /opt/teaspeak/teastart_minimal.sh
 
-CMD ["/opt/teaspeak/TeaSpeakServer"]
+ENTRYPOINT ["/opt/teaspeak/TeaSpeakServer"]
+
+CMD ["start"]
 
 EXPOSE 9987/udp
 EXPOSE 10011
