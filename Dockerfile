@@ -8,6 +8,7 @@ RUN apt-get update -y && apt install -y unzip && mkdir /opt/teaspeak
 COPY teaspeak.zip /tmp/
 
 RUN unzip /tmp/teaspeak.zip -d /opt/teaspeak/ && \
+    chmod +x /opt/teaspeak/teastart_minimal.sh && \
     /opt/teaspeak/teastart_minimal.sh
 
 CMD ["/opt/teaspeak/TeaSpeakServer"]
