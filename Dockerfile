@@ -5,10 +5,9 @@ LABEL com.teaspeak.version="1.3.22"
 
 RUN apt-get update -y && apt install -y unzip && mkdir /opt/teaspeak
 
-COPY teaspeak.zip /tmp/
+COPY teaspeak /opt/teaspeak/
 
-RUN unzip /tmp/teaspeak.zip -d /opt/teaspeak/ && \
-    chmod +x /opt/teaspeak/teastart_minimal.sh && \
+RUN chmod +x /opt/teaspeak/teastart_minimal.sh && \
     chmod +x /opt/teaspeak/TeaSpeakServer && \
     /opt/teaspeak/teastart_minimal.sh
 
