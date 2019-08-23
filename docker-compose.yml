@@ -1,7 +1,7 @@
 version: '3'
 services:
   voice:
-    build: voice-server/.
+    build: .
     restart: always
     container_name: "teamspeak-voice"
     networks:
