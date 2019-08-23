@@ -10,16 +10,6 @@ services:
       - "9987:9987/udp"
       - "10011:10011"
       - "30033:30033"
-  accounting:
-    build: accounting-server/.
-    restart: always
-    container_name: "teamspeak-accounting"
-    networks:
-      - local
-    ports:
-      - "9987:9987/udp"
-      - "10011:10011"
-      - "30033:30033"
 networks:
   local:
     driver: bridge
