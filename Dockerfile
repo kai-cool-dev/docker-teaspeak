@@ -13,7 +13,7 @@ RUN chmod +x /opt/teaspeak/teastart_minimal.sh && \
     chmod +x /opt/teaspeak/TeaSpeakServer && \
     /opt/teaspeak/teastart_minimal.sh
 
-ENTRYPOINT ["/opt/teaspeak/TeaSpeakServer"]
+ENTRYPOINT ["/opt/teaspeak/teastart.sh"]
 
 CMD ["start"]
 
