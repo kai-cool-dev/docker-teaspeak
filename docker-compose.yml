@@ -2,9 +2,9 @@ version: '3'
 services:
   voice:
     build: .
-    image: "kai/teamspeak:latest"
+    image: "kai/teaspeak:latest"
     restart: always
-    container_name: "teamspeak-voice"
+    container_name: "teaspeak-voice"
     networks:
       - local
     ports:
