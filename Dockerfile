@@ -8,7 +8,7 @@ RUN apt-get update -y && \
 
 COPY teaspeak.tar.gz /opt/teaspeak/
 
-RUN tar -zxvf /opt/teaspeak/teaspeak.tar.gz /opt/teaspeak && \
+RUN tar -zxvf /opt/teaspeak/teaspeak.tar.gz /opt/teaspeak/ && \
     /opt/teaspeak/teastart_minimal.sh
 
 CMD ["/bin/bash","/opt/teaspeak/teastart.sh","start"]
