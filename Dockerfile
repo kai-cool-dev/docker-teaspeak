@@ -9,7 +9,7 @@ COPY teaspeak.tar.gz /opt/teaspeak/
 
 RUN tar -zxvf /opt/teaspeak/teaspeak.tar.gz -C /opt/teaspeak/
 
-CMD ["cd /opt/teaspeak/ && ./teastart_minimal.sh","start"]
+CMD ["/opt/teaspeak/teastart_minimal.sh"]
 
 EXPOSE 9987/udp
 EXPOSE 10011
