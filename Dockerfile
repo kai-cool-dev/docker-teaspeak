@@ -3,7 +3,7 @@ FROM debian:buster
 LABEL vendor="Kai.cool DEV"
 LABEL com.teaspeak.version="1.3.22"
 
-RUN apt-update -y && \
+RUN apt-get update -y && \
     mkdir /opt/teaspeak
 
 COPY teaspeak.tar.gz /opt/teaspeak
