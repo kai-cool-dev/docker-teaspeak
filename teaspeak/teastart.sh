@@ -9,11 +9,11 @@ PRELOADPATH="./libs/libjemalloc.so.2"
 BINARYNAME="TeaSpeakServer"
 PID_FILE="tpid.pid"
 
-if [ ! -d logs ]; then
-    echo "Please start the TeaSpeak-Server for the first time over teastart_minimal.sh"
-    echo "You could get the query interface information only over this way!"
-    exit 0
-fi
+#if [ ! -d logs ]; then
+#    echo "Please start the TeaSpeak-Server for the first time over teastart_minimal.sh"
+#    echo "You could get the query interface information only over this way!"
+#    exit 0
+#fi
 
 if [ -e "stpid.pid" ]; then
     echo "You already started you TeaSpeak server over teastart_autorestart.sh"
