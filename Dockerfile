@@ -11,6 +11,7 @@ WORKDIR /opt/teaspeak/
 
 RUN chmod +x /opt/teaspeak/teastart_minimal.sh && \
     chmod +x /opt/teaspeak/TeaSpeakServer && \
+    chmod +x /opt/teaspeak/teastart.sh && \
     /opt/teaspeak/teastart_minimal.sh
 
 ENTRYPOINT ["/opt/teaspeak/teastart.sh"]
