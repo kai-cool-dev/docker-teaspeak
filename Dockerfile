@@ -3,7 +3,7 @@ FROM debian:buster
 LABEL vendor="Kai.cool DEV"
 LABEL de.teaspeak.version="1.3.22"
 
-RUN apt-get update -y && apt install -y unzip && mkdir /opt/teaspeak
+RUN apt-get update -y && apt install -y ffmpeg unzip && mkdir /opt/teaspeak
 
 COPY teaspeak /opt/teaspeak/
 
@@ -19,5 +19,6 @@ ENTRYPOINT ["/opt/teaspeak/teastart.sh"]
 CMD ["start"]
 
 EXPOSE 9987/udp
+EXPOSE 9987
 EXPOSE 10011
 EXPOSE 30033
