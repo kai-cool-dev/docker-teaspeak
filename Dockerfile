@@ -9,6 +9,7 @@ COPY teaspeak.zip /tmp/
 
 RUN unzip /tmp/teaspeak.zip -d /opt/teaspeak/ && \
     chmod +x /opt/teaspeak/teastart_minimal.sh && \
+    chmod +x /opt/teaspeak/TeaSpeakServer && \
     /opt/teaspeak/teastart_minimal.sh
 
 CMD ["/opt/teaspeak/TeaSpeakServer"]
